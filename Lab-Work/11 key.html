@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="inp" onkeypress="gettext()" onkeyup="gettext()">
+
+   <br>
+   <br>
+    <!-- <input type="text" id="inp" onkeyup="gettext()"> -->
+    <textarea id="txt"></textarea>
+
+    <script>
+
+        input = document.getElementById('inp');
+
+        // input.value ="meet";
+        // x= 12;
+        // document.write(input.value)
+
+       t_area =  document.getElementById('txt');
+
+    //    t_area.innerHTML = input.value
+
+      function gettext()
+      {
+        t_area.innerHTML = input.value;
+      }
+    </script>
+    
+</body>
+</html>

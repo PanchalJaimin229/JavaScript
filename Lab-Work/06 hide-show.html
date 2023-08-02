@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt exercitationem repellendus aliquid vel deleniti possimus quas commodi, harum laudantium nisi necessitatibus eius. Sint necessitatibus quis rerum laborum non quas!
+    </p>
+
+    <button id="btn" onclick="hideShowPara()">Hide</button>
+
+    <script>
+        p_tag = document.getElementById('para');
+
+        btn = document.getElementById('btn');
+       
+
+        function hideShowPara()
+        {
+            
+            // x = 12;
+            // console.log(p_tag.style.display);//none
+
+            if(p_tag.style.display == "block")
+            {
+                p_tag.style.display = "none";
+                btn.innerHTML ="Show";
+                
+            }
+
+            else 
+            {
+                p_tag.style.display="block";
+                btn.innerHTML ="Hide";
+            }
+           
+        }
+    </script>
+    
+</body>
+</html>

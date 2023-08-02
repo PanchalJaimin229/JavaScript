@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form action="">
+        
+        Name: <input type="text" id="inp" onblur="return validt(inp,inperr,inp)">
+        <b id="inperr"></b><br><br>
+
+        Mobile: <input type="text" id="inp1" onblur="return validt(inp1,inp1err,'',inp1)" maxlength="12">
+        <b id="inp1err"></b>
+
+    </form>
+
+
+    
+    <script>
+
+
+        exp=/^[a-z,A-z]+$/;
+        exp1=/^[0-9]{10,12}$/;
+
+        function validt(a,b,c,d)
+        {
+
+
+            if(a.value==""){
+                b.innerHTML="*Required...!";
+                b.style.color="red";
+                a.style.border="2px solid red";
+                return false;
+            }
+            else{
+                b.innerHTML="";
+                a.style.border="2px solid green";
+            }
+
+
+
+
+            if(!exp.test(c.value)){
+                b.innerHTML="*Letter only...!";
+                b.style.color="red";
+                a.style.border="2px solid red";
+                return false;
+            }
+            else{
+                b.innerHTML="";
+                a.style.border="2px solid green";
+            }
+
+
+
+
+            if(!exp1.test(d.value)){
+                b.innerHTML="*Please Check Your Number and use only number(0-9)...!";
+                b.style.color="red";
+                a.style.border="2px solid red";
+                return false;
+            }
+            else{
+                b.innerHTML="";
+                a.style.border="2px solid green";
+            }
+
+
+        }
+
+
+    </script>
+</body>
+</html>

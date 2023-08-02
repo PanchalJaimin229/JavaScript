@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+  </head>
+  <body>
+      <h3>Enter the number : </h3>
+      <input id="number" />
+      <button onclick="addNumbers()">Print</button>
+      <div id="result">
+
+        <script>
+            function addNumbers() {
+              var number;
+              var result = "";
+      
+              number = Number(document.getElementById("number").value);
+      
+              for(var i = 1; i<= 10; i++){
+                result = result + "<p>"+number + "*" + i + "=" + number * i+"</p>";
+              }
+      
+              document.getElementById("result").innerHTML = result;
+            }
+          </script>
+  </body>
+</html>

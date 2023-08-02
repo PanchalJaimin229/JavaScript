@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <butto onclick="document.getElementById('h1').innerHTML='Abhay'; document.getElementById('h1').style.display='block';">Click</button>
+
+    <button ondragleave="document.getElementById('h1').innerHTML='abhay1'; document.getElementById('h1').style.display='block';">Drag</button>
+    <button onmouseleave="document.getElementById('h1').innerHTML='abhay2'; document.getElementById('h1').style.display='block';">Mouse</button>
+    <button onpointerleave="document.getElementById('h1').innerHTML='abhay3'; document.getElementById('h1').style.display='block';">Pointer</button>
+    <button onclick="document.getElementById('h1').style.display='none';">Clear</button>
+
+    <script>
+        function cl(){
+            document.getElementById('h1').innerHTML='Abhay';
+            document.getElementById('h1').style.display="block";
+        }
+    </script>
+</body>
+</html>
